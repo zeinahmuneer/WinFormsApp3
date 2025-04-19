@@ -17,7 +17,7 @@ Partial Class Login
     Friend WithEvents LogoPictureBox As System.Windows.Forms.PictureBox
     Friend WithEvents UsernameLabel As System.Windows.Forms.Label
     Friend WithEvents PasswordLabel As System.Windows.Forms.Label
-    Friend WithEvents UsernameTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents UserIdTextBox As System.Windows.Forms.TextBox
     Friend WithEvents PasswordTextBox As System.Windows.Forms.TextBox
     Friend WithEvents OK As System.Windows.Forms.Button
     Friend WithEvents Cancel As System.Windows.Forms.Button
@@ -34,7 +34,7 @@ Partial Class Login
         LogoPictureBox = New PictureBox()
         UsernameLabel = New Label()
         PasswordLabel = New Label()
-        UsernameTextBox = New TextBox()
+        UserIdTextBox = New TextBox()
         PasswordTextBox = New TextBox()
         OK = New Button()
         Cancel = New Button()
@@ -44,79 +44,87 @@ Partial Class Login
         ' LogoPictureBox
         ' 
         LogoPictureBox.Image = CType(resources.GetObject("LogoPictureBox.Image"), Image)
-        LogoPictureBox.Location = New Point(12, 24)
+        LogoPictureBox.Location = New Point(10, 19)
+        LogoPictureBox.Margin = New Padding(2)
         LogoPictureBox.Name = "LogoPictureBox"
-        LogoPictureBox.Size = New Size(137, 177)
+        LogoPictureBox.Size = New Size(110, 142)
         LogoPictureBox.SizeMode = PictureBoxSizeMode.Zoom
         LogoPictureBox.TabIndex = 0
         LogoPictureBox.TabStop = False
         ' 
         ' UsernameLabel
         ' 
-        UsernameLabel.Location = New Point(172, 24)
+        UsernameLabel.Location = New Point(138, 19)
+        UsernameLabel.Margin = New Padding(2, 0, 2, 0)
         UsernameLabel.Name = "UsernameLabel"
-        UsernameLabel.Size = New Size(220, 23)
+        UsernameLabel.Size = New Size(176, 18)
         UsernameLabel.TabIndex = 0
-        UsernameLabel.Text = "&User name"
+        UsernameLabel.Text = "&User Id"
         UsernameLabel.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' PasswordLabel
         ' 
-        PasswordLabel.Location = New Point(172, 81)
+        PasswordLabel.Location = New Point(138, 65)
+        PasswordLabel.Margin = New Padding(2, 0, 2, 0)
         PasswordLabel.Name = "PasswordLabel"
-        PasswordLabel.Size = New Size(220, 23)
+        PasswordLabel.Size = New Size(176, 18)
         PasswordLabel.TabIndex = 2
         PasswordLabel.Text = "&Password"
         PasswordLabel.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' UsernameTextBox
+        ' UserIdTextBox
         ' 
-        UsernameTextBox.Location = New Point(174, 44)
-        UsernameTextBox.Name = "UsernameTextBox"
-        UsernameTextBox.Size = New Size(220, 31)
-        UsernameTextBox.TabIndex = 1
+        UserIdTextBox.Location = New Point(139, 35)
+        UserIdTextBox.Margin = New Padding(2)
+        UserIdTextBox.Name = "UserIdTextBox"
+        UserIdTextBox.Size = New Size(177, 27)
+        UserIdTextBox.TabIndex = 1
         ' 
         ' PasswordTextBox
         ' 
-        PasswordTextBox.Location = New Point(174, 101)
+        PasswordTextBox.Location = New Point(139, 81)
+        PasswordTextBox.Margin = New Padding(2)
         PasswordTextBox.Name = "PasswordTextBox"
         PasswordTextBox.PasswordChar = "*"c
-        PasswordTextBox.Size = New Size(220, 31)
+        PasswordTextBox.Size = New Size(177, 27)
         PasswordTextBox.TabIndex = 3
         ' 
         ' OK
         ' 
-        OK.Location = New Point(197, 161)
+        OK.Location = New Point(158, 129)
+        OK.Margin = New Padding(2)
         OK.Name = "OK"
-        OK.Size = New Size(94, 40)
+        OK.Size = New Size(75, 32)
         OK.TabIndex = 4
         OK.Text = "&Login"
         ' 
         ' Cancel
         ' 
         Cancel.DialogResult = DialogResult.Cancel
-        Cancel.Location = New Point(300, 161)
+        Cancel.Location = New Point(240, 129)
+        Cancel.Margin = New Padding(2)
         Cancel.Name = "Cancel"
-        Cancel.Size = New Size(94, 40)
+        Cancel.Size = New Size(75, 32)
         Cancel.TabIndex = 5
         Cancel.Text = "&Cancel"
         ' 
         ' Login
         ' 
         AcceptButton = OK
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.Control
         CancelButton = Cancel
-        ClientSize = New Size(476, 238)
+        ClientSize = New Size(381, 190)
         Controls.Add(Cancel)
         Controls.Add(OK)
         Controls.Add(PasswordTextBox)
-        Controls.Add(UsernameTextBox)
+        Controls.Add(UserIdTextBox)
         Controls.Add(PasswordLabel)
         Controls.Add(UsernameLabel)
         Controls.Add(LogoPictureBox)
         FormBorderStyle = FormBorderStyle.FixedDialog
+        Margin = New Padding(2)
         MaximizeBox = False
         MinimizeBox = False
         Name = "Login"

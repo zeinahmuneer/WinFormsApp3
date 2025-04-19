@@ -1,4 +1,12 @@
 ﻿Public Class Patient
+    Public UserId As Integer
+    Public UserFirstName As String
+
+
+    Private Sub Patient_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        UserName.Text = "Patient Name: " + UserFirstName
+
+    End Sub
     Private Sub MakeAnAppointmentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MakeAnAppointmentToolStripMenuItem.Click
         AppointmentCreation.MdiParent = Me
         AppointmentCreation.Show()
@@ -11,6 +19,7 @@
 
     Private Sub ViewMedicalReportsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewMedicalReportsToolStripMenuItem.Click
         ViewMR.MdiParent = Me
+        ViewMR.UserId = UserId
         ViewMR.Show()
     End Sub
     Private Sub ChangePasswordToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChangePasswordToolStripMenuItem.Click
@@ -22,5 +31,8 @@
         Login.Show()
     End Sub
 
+    Private Sub ToolStripTextBox1_Click(sender As Object, e As EventArgs)
+
+    End Sub
 
 End Class
