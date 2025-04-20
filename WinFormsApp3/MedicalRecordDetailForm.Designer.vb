@@ -28,6 +28,7 @@ Partial Class MedicalRecordDetailForm
         Label2 = New Label()
         Label3 = New Label()
         CloseButton = New Button()
+        PatientName = New Label()
         SuspendLayout()
         ' 
         ' VisitNotesTextBox
@@ -35,6 +36,7 @@ Partial Class MedicalRecordDetailForm
         VisitNotesTextBox.Location = New Point(12, 113)
         VisitNotesTextBox.Multiline = True
         VisitNotesTextBox.Name = "VisitNotesTextBox"
+        VisitNotesTextBox.ReadOnly = True
         VisitNotesTextBox.Size = New Size(284, 158)
         VisitNotesTextBox.TabIndex = 0
         ' 
@@ -43,13 +45,14 @@ Partial Class MedicalRecordDetailForm
         MedicationsTextBox.Location = New Point(325, 113)
         MedicationsTextBox.Multiline = True
         MedicationsTextBox.Name = "MedicationsTextBox"
+        MedicationsTextBox.ReadOnly = True
         MedicationsTextBox.Size = New Size(284, 158)
         MedicationsTextBox.TabIndex = 1
         ' 
         ' DoctorNameLabel
         ' 
         DoctorNameLabel.AutoSize = True
-        DoctorNameLabel.Location = New Point(12, 18)
+        DoctorNameLabel.Location = New Point(12, 42)
         DoctorNameLabel.Name = "DoctorNameLabel"
         DoctorNameLabel.Size = New Size(106, 20)
         DoctorNameLabel.TabIndex = 2
@@ -82,11 +85,21 @@ Partial Class MedicalRecordDetailForm
         CloseButton.Text = "Close"
         CloseButton.UseVisualStyleBackColor = True
         ' 
+        ' PatientName
+        ' 
+        PatientName.AutoSize = True
+        PatientName.Location = New Point(12, 9)
+        PatientName.Name = "PatientName"
+        PatientName.Size = New Size(105, 20)
+        PatientName.TabIndex = 6
+        PatientName.Text = "Patient Name: "
+        ' 
         ' MedicalRecordDetailForm
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(630, 333)
+        Controls.Add(PatientName)
         Controls.Add(CloseButton)
         Controls.Add(Label3)
         Controls.Add(Label2)
@@ -105,4 +118,5 @@ Partial Class MedicalRecordDetailForm
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents CloseButton As Button
+    Friend WithEvents PatientName As Label
 End Class

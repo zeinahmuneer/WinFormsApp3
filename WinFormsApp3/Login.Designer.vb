@@ -64,7 +64,7 @@ Partial Class Login
         ' 
         ' PasswordLabel
         ' 
-        PasswordLabel.Location = New Point(138, 65)
+        PasswordLabel.Location = New Point(138, 78)
         PasswordLabel.Margin = New Padding(2, 0, 2, 0)
         PasswordLabel.Name = "PasswordLabel"
         PasswordLabel.Size = New Size(176, 18)
@@ -74,7 +74,7 @@ Partial Class Login
         ' 
         ' UserIdTextBox
         ' 
-        UserIdTextBox.Location = New Point(139, 35)
+        UserIdTextBox.Location = New Point(138, 39)
         UserIdTextBox.Margin = New Padding(2)
         UserIdTextBox.Name = "UserIdTextBox"
         UserIdTextBox.Size = New Size(177, 27)
@@ -82,16 +82,17 @@ Partial Class Login
         ' 
         ' PasswordTextBox
         ' 
-        PasswordTextBox.Location = New Point(139, 81)
+        PasswordTextBox.Location = New Point(139, 98)
         PasswordTextBox.Margin = New Padding(2)
         PasswordTextBox.Name = "PasswordTextBox"
         PasswordTextBox.PasswordChar = "*"c
         PasswordTextBox.Size = New Size(177, 27)
         PasswordTextBox.TabIndex = 3
+        PasswordTextBox.UseSystemPasswordChar = True
         ' 
         ' OK
         ' 
-        OK.Location = New Point(158, 129)
+        OK.Location = New Point(139, 147)
         OK.Margin = New Padding(2)
         OK.Name = "OK"
         OK.Size = New Size(75, 32)
@@ -101,7 +102,7 @@ Partial Class Login
         ' Cancel
         ' 
         Cancel.DialogResult = DialogResult.Cancel
-        Cancel.Location = New Point(240, 129)
+        Cancel.Location = New Point(241, 147)
         Cancel.Margin = New Padding(2)
         Cancel.Name = "Cancel"
         Cancel.Size = New Size(75, 32)

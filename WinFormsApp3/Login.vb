@@ -13,14 +13,15 @@ Public Class Login
                 Dim firstName As String = reader("First_Name").ToString()
 
                 reader.Close()
-
                 If role = 1 Then
                     Doctor.UserFirstName = firstName
                     Doctor.UserId = Convert.ToInt32(UserIdTextBox.Text)
+                    Doctor.Role = role
                     Doctor.Show()
                 Else
                     Patient.UserFirstName = firstName
                     Patient.UserId = Convert.ToInt32(UserIdTextBox.Text)
+                    Patient.Role = role
                     Patient.Show()
                 End If
 

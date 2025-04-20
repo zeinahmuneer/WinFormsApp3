@@ -23,7 +23,6 @@ Partial Class EditApp
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         AppInfo = New DataGridView()
-        Edit = New Button()
         CType(AppInfo, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -31,27 +30,19 @@ Partial Class EditApp
         ' 
         AppInfo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         AppInfo.Location = New Point(-1, 1)
+        AppInfo.Margin = New Padding(2)
         AppInfo.Name = "AppInfo"
         AppInfo.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
-        AppInfo.Size = New Size(716, 264)
+        AppInfo.Size = New Size(729, 343)
         AppInfo.TabIndex = 0
-        ' 
-        ' Edit
-        ' 
-        Edit.Location = New Point(12, 285)
-        Edit.Name = "Edit"
-        Edit.Size = New Size(112, 34)
-        Edit.TabIndex = 1
-        Edit.Text = "&Edit"
-        Edit.UseVisualStyleBackColor = True
         ' 
         ' EditApp
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(715, 344)
-        Controls.Add(Edit)
+        ClientSize = New Size(729, 342)
         Controls.Add(AppInfo)
+        Margin = New Padding(2)
         Name = "EditApp"
         Text = "View or Edit Appointments"
         CType(AppInfo, ComponentModel.ISupportInitialize).EndInit()
@@ -59,5 +50,4 @@ Partial Class EditApp
     End Sub
 
     Friend WithEvents AppInfo As DataGridView
-    Friend WithEvents Edit As Button
 End Class

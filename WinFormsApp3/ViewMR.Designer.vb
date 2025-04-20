@@ -33,14 +33,14 @@ Partial Class ViewMR
         MedicalRecordsGrid.Margin = New Padding(2)
         MedicalRecordsGrid.Name = "MedicalRecordsGrid"
         MedicalRecordsGrid.RowHeadersWidth = 62
-        MedicalRecordsGrid.Size = New Size(606, 273)
+        MedicalRecordsGrid.Size = New Size(883, 329)
         MedicalRecordsGrid.TabIndex = 0
         ' 
         ' ViewMR
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(605, 269)
+        ClientSize = New Size(538, 240)
         Controls.Add(MedicalRecordsGrid)
         Margin = New Padding(2)
         Name = "ViewMR"

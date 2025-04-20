@@ -137,6 +137,7 @@ Partial Class AppointmentCreation
         ' 
         ' TimePicker
         ' 
+        TimePicker.Format = DateTimePickerFormat.Time
         TimePicker.Location = New Point(280, 232)
         TimePicker.Margin = New Padding(2)
         TimePicker.Name = "TimePicker"
@@ -147,7 +148,7 @@ Partial Class AppointmentCreation
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(519, 320)
+        ClientSize = New Size(519, 346)
         Controls.Add(TimePicker)
         Controls.Add(Label5)
         Controls.Add(CancelButton)

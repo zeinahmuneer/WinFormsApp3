@@ -1,5 +1,6 @@
 ﻿Public Class Patient
     Public UserId As Integer
+    Public Role As Integer
     Public UserFirstName As String
 
 
@@ -9,11 +10,14 @@
     End Sub
     Private Sub MakeAnAppointmentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MakeAnAppointmentToolStripMenuItem.Click
         AppointmentCreation.MdiParent = Me
+        AppointmentCreation.UserId = UserId
         AppointmentCreation.Show()
     End Sub
 
     Private Sub EditAnAppointmentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditAnAppointmentToolStripMenuItem.Click
         EditApp.MdiParent = Me
+        EditApp.UserId = UserId
+        EditApp.Role = Role
         EditApp.Show()
     End Sub
 
@@ -24,6 +28,7 @@
     End Sub
     Private Sub ChangePasswordToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChangePasswordToolStripMenuItem.Click
         ChangePassword.MdiParent = Me
+        ChangePassword.UserId = UserId
         ChangePassword.Show()
     End Sub
     Private Sub LogoutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogoutToolStripMenuItem.Click
