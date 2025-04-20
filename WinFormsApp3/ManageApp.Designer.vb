@@ -22,42 +22,32 @@ Partial Class ManageApp
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        DataGridView1 = New DataGridView()
-        Button1 = New Button()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        DoctorApp = New DataGridView()
+        CType(DoctorApp, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' DataGridView1
+        ' DoctorApp
         ' 
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(-5, 1)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.RowHeadersWidth = 62
-        DataGridView1.Size = New Size(803, 374)
-        DataGridView1.TabIndex = 0
-        ' 
-        ' Button1
-        ' 
-        Button1.Location = New Point(22, 395)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(282, 43)
-        Button1.TabIndex = 1
-        Button1.Text = "Manage Appointments"
-        Button1.UseVisualStyleBackColor = True
+        DoctorApp.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DoctorApp.Location = New Point(-4, 1)
+        DoctorApp.Margin = New Padding(2)
+        DoctorApp.Name = "DoctorApp"
+        DoctorApp.RowHeadersWidth = 62
+        DoctorApp.Size = New Size(821, 362)
+        DoctorApp.TabIndex = 0
         ' 
         ' ManageApp
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 452)
-        Controls.Add(Button1)
-        Controls.Add(DataGridView1)
+        ClientSize = New Size(820, 362)
+        Controls.Add(DoctorApp)
+        Margin = New Padding(2)
         Name = "ManageApp"
         Text = "ManageApp"
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(DoctorApp, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Button1 As Button
+    Friend WithEvents DoctorApp As DataGridView
 End Class

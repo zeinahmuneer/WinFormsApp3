@@ -22,30 +22,32 @@ Partial Class ViewMR
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        DataGridView1 = New DataGridView()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        MedicalRecordsGrid = New DataGridView()
+        CType(MedicalRecordsGrid, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' DataGridView1
+        ' MedicalRecordsGrid
         ' 
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(2, -3)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.RowHeadersWidth = 62
-        DataGridView1.Size = New Size(757, 341)
-        DataGridView1.TabIndex = 0
+        MedicalRecordsGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        MedicalRecordsGrid.Location = New Point(2, -2)
+        MedicalRecordsGrid.Margin = New Padding(2)
+        MedicalRecordsGrid.Name = "MedicalRecordsGrid"
+        MedicalRecordsGrid.RowHeadersWidth = 62
+        MedicalRecordsGrid.Size = New Size(883, 329)
+        MedicalRecordsGrid.TabIndex = 0
         ' 
         ' ViewMR
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(756, 336)
-        Controls.Add(DataGridView1)
+        ClientSize = New Size(538, 240)
+        Controls.Add(MedicalRecordsGrid)
+        Margin = New Padding(2)
         Name = "ViewMR"
         Text = "ViewMR"
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(MedicalRecordsGrid, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents MedicalRecordsGrid As DataGridView
 End Class

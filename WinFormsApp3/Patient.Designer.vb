@@ -31,6 +31,7 @@ Partial Class Patient
         ManageAccountToolStripMenuItem = New ToolStripMenuItem()
         ChangePasswordToolStripMenuItem = New ToolStripMenuItem()
         LogoutToolStripMenuItem = New ToolStripMenuItem()
+        UserName = New Label()
         MenuStrip1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -40,7 +41,8 @@ Partial Class Patient
         MenuStrip1.Items.AddRange(New ToolStripItem() {AppointmentsToolStripMenuItem, MedicalRecordsToolStripMenuItem, ManageAccountToolStripMenuItem})
         MenuStrip1.Location = New Point(0, 0)
         MenuStrip1.Name = "MenuStrip1"
-        MenuStrip1.Size = New Size(800, 33)
+        MenuStrip1.Padding = New Padding(5, 2, 0, 2)
+        MenuStrip1.Size = New Size(640, 28)
         MenuStrip1.TabIndex = 0
         MenuStrip1.Text = "MenuStrip1"
         ' 
@@ -48,61 +50,74 @@ Partial Class Patient
         ' 
         AppointmentsToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {MakeAnAppointmentToolStripMenuItem, EditAnAppointmentToolStripMenuItem})
         AppointmentsToolStripMenuItem.Name = "AppointmentsToolStripMenuItem"
-        AppointmentsToolStripMenuItem.Size = New Size(142, 29)
+        AppointmentsToolStripMenuItem.Size = New Size(117, 24)
         AppointmentsToolStripMenuItem.Text = "Appointments"
         ' 
         ' MakeAnAppointmentToolStripMenuItem
         ' 
         MakeAnAppointmentToolStripMenuItem.Name = "MakeAnAppointmentToolStripMenuItem"
-        MakeAnAppointmentToolStripMenuItem.Size = New Size(289, 34)
+        MakeAnAppointmentToolStripMenuItem.Size = New Size(238, 26)
         MakeAnAppointmentToolStripMenuItem.Text = "Make an appointment"
         ' 
         ' EditAnAppointmentToolStripMenuItem
         ' 
         EditAnAppointmentToolStripMenuItem.Name = "EditAnAppointmentToolStripMenuItem"
-        EditAnAppointmentToolStripMenuItem.Size = New Size(289, 34)
+        EditAnAppointmentToolStripMenuItem.Size = New Size(238, 26)
         EditAnAppointmentToolStripMenuItem.Text = "Edit an appointment"
         ' 
         ' MedicalRecordsToolStripMenuItem
         ' 
         MedicalRecordsToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ViewMedicalReportsToolStripMenuItem})
         MedicalRecordsToolStripMenuItem.Name = "MedicalRecordsToolStripMenuItem"
-        MedicalRecordsToolStripMenuItem.Size = New Size(157, 29)
+        MedicalRecordsToolStripMenuItem.Size = New Size(133, 24)
         MedicalRecordsToolStripMenuItem.Text = "Medical Records"
         ' 
         ' ViewMedicalReportsToolStripMenuItem
         ' 
         ViewMedicalReportsToolStripMenuItem.Name = "ViewMedicalReportsToolStripMenuItem"
-        ViewMedicalReportsToolStripMenuItem.Size = New Size(283, 34)
+        ViewMedicalReportsToolStripMenuItem.Size = New Size(236, 26)
         ViewMedicalReportsToolStripMenuItem.Text = "View Medical Reports"
         ' 
         ' ManageAccountToolStripMenuItem
         ' 
         ManageAccountToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ChangePasswordToolStripMenuItem, LogoutToolStripMenuItem})
         ManageAccountToolStripMenuItem.Name = "ManageAccountToolStripMenuItem"
-        ManageAccountToolStripMenuItem.Size = New Size(162, 29)
+        ManageAccountToolStripMenuItem.Size = New Size(135, 24)
         ManageAccountToolStripMenuItem.Text = "Manage Account"
         ' 
         ' ChangePasswordToolStripMenuItem
         ' 
         ChangePasswordToolStripMenuItem.Name = "ChangePasswordToolStripMenuItem"
-        ChangePasswordToolStripMenuItem.Size = New Size(270, 34)
+        ChangePasswordToolStripMenuItem.Size = New Size(209, 26)
         ChangePasswordToolStripMenuItem.Text = "Change password"
         ' 
         ' LogoutToolStripMenuItem
         ' 
         LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        LogoutToolStripMenuItem.Size = New Size(270, 34)
+        LogoutToolStripMenuItem.Size = New Size(209, 26)
         LogoutToolStripMenuItem.Text = "Logout"
+        ' 
+        ' UserName
+        ' 
+        UserName.AutoSize = True
+        UserName.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        UserName.Location = New Point(0, 28)
+        UserName.Name = "UserName"
+        UserName.Padding = New Padding(11, 0, 0, 0)
+        UserName.Size = New Size(116, 20)
+        UserName.TabIndex = 2
+        UserName.Text = "Patient Name: "
         ' 
         ' Patient
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(640, 360)
+        Controls.Add(UserName)
         Controls.Add(MenuStrip1)
         IsMdiContainer = True
         MainMenuStrip = MenuStrip1
+        Margin = New Padding(2)
         Name = "Patient"
         Text = "Patient"
         WindowState = FormWindowState.Maximized
@@ -121,5 +136,6 @@ Partial Class Patient
     Friend WithEvents ManageAccountToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ChangePasswordToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LogoutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UserName As Label
 
 End Class

@@ -25,92 +25,103 @@ Partial Class ChangePassword
         Label1 = New Label()
         Label2 = New Label()
         Label3 = New Label()
-        TextBox1 = New TextBox()
-        TextBox2 = New TextBox()
-        TextBox3 = New TextBox()
-        Button1 = New Button()
-        Button2 = New Button()
+        OldPass = New TextBox()
+        NewPass = New TextBox()
+        ConfirmPass = New TextBox()
+        SaveBtn = New Button()
+        CancelBtn = New Button()
         SuspendLayout()
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(40, 42)
+        Label1.Location = New Point(32, 23)
+        Label1.Margin = New Padding(2, 0, 2, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(206, 25)
+        Label1.Size = New Size(169, 20)
         Label1.TabIndex = 0
         Label1.Text = "Enter your old password"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(40, 108)
+        Label2.Location = New Point(32, 111)
+        Label2.Margin = New Padding(2, 0, 2, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(201, 25)
+        Label2.Size = New Size(166, 20)
         Label2.TabIndex = 1
         Label2.Text = "Enter the new password"
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Location = New Point(40, 172)
+        Label3.Location = New Point(32, 196)
+        Label3.Margin = New Padding(2, 0, 2, 0)
         Label3.Name = "Label3"
-        Label3.Size = New Size(195, 25)
+        Label3.Size = New Size(160, 20)
         Label3.TabIndex = 2
         Label3.Text = "Confirm new password"
         ' 
-        ' TextBox1
+        ' OldPass
         ' 
-        TextBox1.Location = New Point(40, 74)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(195, 31)
-        TextBox1.TabIndex = 3
+        OldPass.Location = New Point(32, 59)
+        OldPass.Margin = New Padding(2)
+        OldPass.Name = "OldPass"
+        OldPass.Size = New Size(157, 27)
+        OldPass.TabIndex = 3
         ' 
-        ' TextBox2
+        ' NewPass
         ' 
-        TextBox2.Location = New Point(40, 138)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(195, 31)
-        TextBox2.TabIndex = 4
+        NewPass.Location = New Point(32, 144)
+        NewPass.Margin = New Padding(2)
+        NewPass.Name = "NewPass"
+        NewPass.Size = New Size(157, 27)
+        NewPass.TabIndex = 4
+        NewPass.UseSystemPasswordChar = True
         ' 
-        ' TextBox3
+        ' ConfirmPass
         ' 
-        TextBox3.Location = New Point(40, 200)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(195, 31)
-        TextBox3.TabIndex = 5
+        ConfirmPass.Location = New Point(32, 232)
+        ConfirmPass.Margin = New Padding(2)
+        ConfirmPass.Name = "ConfirmPass"
+        ConfirmPass.Size = New Size(157, 27)
+        ConfirmPass.TabIndex = 5
+        ConfirmPass.UseSystemPasswordChar = True
         ' 
-        ' Button1
+        ' SaveBtn
         ' 
-        Button1.Location = New Point(40, 241)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(112, 34)
-        Button1.TabIndex = 6
-        Button1.Text = "&Save"
-        Button1.UseVisualStyleBackColor = True
+        SaveBtn.Location = New Point(32, 300)
+        SaveBtn.Margin = New Padding(2)
+        SaveBtn.Name = "SaveBtn"
+        SaveBtn.Size = New Size(90, 27)
+        SaveBtn.TabIndex = 6
+        SaveBtn.Text = "&Save"
+        SaveBtn.UseVisualStyleBackColor = True
         ' 
-        ' Button2
+        ' CancelBtn
         ' 
-        Button2.Location = New Point(208, 241)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(112, 34)
-        Button2.TabIndex = 7
-        Button2.Text = "Cancel"
-        Button2.UseVisualStyleBackColor = True
+        CancelBtn.Location = New Point(168, 300)
+        CancelBtn.Margin = New Padding(2)
+        CancelBtn.Name = "CancelBtn"
+        CancelBtn.Size = New Size(90, 27)
+        CancelBtn.TabIndex = 7
+        CancelBtn.Text = "Cancel"
+        CancelBtn.UseVisualStyleBackColor = True
         ' 
         ' ChangePassword
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(519, 287)
-        Controls.Add(Button2)
-        Controls.Add(Button1)
-        Controls.Add(TextBox3)
-        Controls.Add(TextBox2)
-        Controls.Add(TextBox1)
+        ClientSize = New Size(415, 357)
+        Controls.Add(CancelBtn)
+        Controls.Add(SaveBtn)
+        Controls.Add(ConfirmPass)
+        Controls.Add(NewPass)
+        Controls.Add(OldPass)
         Controls.Add(Label3)
         Controls.Add(Label2)
         Controls.Add(Label1)
+        Margin = New Padding(2)
         Name = "ChangePassword"
         Text = "ChangePassword"
         ResumeLayout(False)
@@ -120,9 +131,9 @@ Partial Class ChangePassword
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents OldPass As TextBox
+    Friend WithEvents NewPass As TextBox
+    Friend WithEvents ConfirmPass As TextBox
+    Friend WithEvents SaveBtn As Button
+    Friend WithEvents CancelBtn As Button
 End Class
