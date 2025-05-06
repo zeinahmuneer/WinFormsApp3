@@ -23,6 +23,7 @@ Partial Class ManageApp
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         DoctorApp = New DataGridView()
+        PrintAppBtn = New Button()
         CType(DoctorApp, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -36,11 +37,21 @@ Partial Class ManageApp
         DoctorApp.Size = New Size(821, 362)
         DoctorApp.TabIndex = 0
         ' 
+        ' PrintAppBtn
+        ' 
+        PrintAppBtn.Location = New Point(12, 373)
+        PrintAppBtn.Name = "PrintAppBtn"
+        PrintAppBtn.Size = New Size(219, 29)
+        PrintAppBtn.TabIndex = 1
+        PrintAppBtn.Text = "Print Today's Appointments"
+        PrintAppBtn.UseVisualStyleBackColor = True
+        ' 
         ' ManageApp
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(820, 362)
+        ClientSize = New Size(820, 414)
+        Controls.Add(PrintAppBtn)
         Controls.Add(DoctorApp)
         Margin = New Padding(2)
         Name = "ManageApp"
@@ -50,4 +61,5 @@ Partial Class ManageApp
     End Sub
 
     Friend WithEvents DoctorApp As DataGridView
+    Friend WithEvents PrintAppBtn As Button
 End Class
