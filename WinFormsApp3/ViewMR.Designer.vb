@@ -23,6 +23,7 @@ Partial Class ViewMR
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         MedicalRecordsGrid = New DataGridView()
+        PrintMRBtn = New Button()
         CType(MedicalRecordsGrid, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -33,14 +34,24 @@ Partial Class ViewMR
         MedicalRecordsGrid.Margin = New Padding(2)
         MedicalRecordsGrid.Name = "MedicalRecordsGrid"
         MedicalRecordsGrid.RowHeadersWidth = 62
-        MedicalRecordsGrid.Size = New Size(883, 329)
+        MedicalRecordsGrid.Size = New Size(726, 265)
         MedicalRecordsGrid.TabIndex = 0
+        ' 
+        ' PrintMRBtn
+        ' 
+        PrintMRBtn.Location = New Point(12, 268)
+        PrintMRBtn.Name = "PrintMRBtn"
+        PrintMRBtn.Size = New Size(226, 29)
+        PrintMRBtn.TabIndex = 1
+        PrintMRBtn.Text = "Print Medical Records"
+        PrintMRBtn.UseVisualStyleBackColor = True
         ' 
         ' ViewMR
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(538, 240)
+        ClientSize = New Size(725, 308)
+        Controls.Add(PrintMRBtn)
         Controls.Add(MedicalRecordsGrid)
         Margin = New Padding(2)
         Name = "ViewMR"
@@ -50,4 +61,5 @@ Partial Class ViewMR
     End Sub
 
     Friend WithEvents MedicalRecordsGrid As DataGridView
+    Friend WithEvents PrintMRBtn As Button
 End Class

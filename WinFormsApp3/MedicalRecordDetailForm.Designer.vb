@@ -29,6 +29,7 @@ Partial Class MedicalRecordDetailForm
         Label3 = New Label()
         CloseButton = New Button()
         PatientName = New Label()
+        MedicalRBtn = New Button()
         SuspendLayout()
         ' 
         ' VisitNotesTextBox
@@ -94,11 +95,21 @@ Partial Class MedicalRecordDetailForm
         PatientName.TabIndex = 6
         PatientName.Text = "Patient Name: "
         ' 
+        ' MedicalRBtn
+        ' 
+        MedicalRBtn.Location = New Point(130, 292)
+        MedicalRBtn.Name = "MedicalRBtn"
+        MedicalRBtn.Size = New Size(166, 29)
+        MedicalRBtn.TabIndex = 7
+        MedicalRBtn.Text = "Print Medical Record"
+        MedicalRBtn.UseVisualStyleBackColor = True
+        ' 
         ' MedicalRecordDetailForm
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(630, 333)
+        Controls.Add(MedicalRBtn)
         Controls.Add(PatientName)
         Controls.Add(CloseButton)
         Controls.Add(Label3)
@@ -119,4 +130,5 @@ Partial Class MedicalRecordDetailForm
     Friend WithEvents Label3 As Label
     Friend WithEvents CloseButton As Button
     Friend WithEvents PatientName As Label
+    Friend WithEvents MedicalRBtn As Button
 End Class
